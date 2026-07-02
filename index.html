@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zyee Website Downloader</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container" id="app">
+        <h1>⚡ Zyee Website Downloader</h1>
+        <p class="subtitle">Scan & download seluruh file / folder dari website target</p>
+
+        <div class="input-group">
+            <input type="text" id="urlInput" placeholder="Masukkan URL website, contoh: https://example.com" value="https://example.com" />
+            <button class="btn" id="scanBtn">🔍 Scan</button>
+        </div>
+
+        <div id="statusArea" class="scan-status" style="display:none;">
+            <span class="spinner"></span>
+            <span id="statusText">Memindai struktur...</span>
+        </div>
+
+        <div id="treeContainer" class="tree-container" style="display:none;"></div>
+
+        <div class="download-area">
+            <button class="btn btn-download" id="downloadBtn" disabled>📦 Download ZIP</button>
+        </div>
+
+        <div class="footer">Zyee © 2026 — semua file akan di-zip (simulasi demo)</div>
+    </div>
+
+    <!-- library eksternal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+  </html>
